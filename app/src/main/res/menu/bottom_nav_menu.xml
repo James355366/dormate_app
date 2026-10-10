@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Bottom navigation menu.
+  All 5 items are declared here; role-based visibility toggling is handled
+  programmatically in MainActivity.applyRoleVisibility().
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/tab_home"
+        android:menuCategory="secondary" />
+
+    <item
+        android:id="@+id/nav_maintenance"
+        android:icon="@drawable/ic_build"
+        android:title="@string/tab_maintenance"
+        android:menuCategory="secondary" />
+
+    <item
+        android:id="@+id/nav_bills"
+        android:icon="@drawable/ic_receipt"
+        android:title="@string/tab_bills"
+        android:menuCategory="secondary" />
+
+    <item
+        android:id="@+id/nav_announcements"
+        android:icon="@drawable/ic_announcement"
+        android:title="@string/tab_announcements"
+        android:menuCategory="secondary" />
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_person"
+        android:title="@string/tab_profile"
+        android:menuCategory="secondary" />
+
+</menu>

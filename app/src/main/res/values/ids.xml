@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Standalone ID resources.
+
+  nav_manage_users is intentionally NOT declared in bottom_nav_menu.xml —
+  BottomNavigationView hard-caps at 5 menu items (even hidden ones count
+  toward that limit), so this item is added/removed at runtime in
+  MainActivity.applyRoleVisibility() instead of living in the static menu.
+
+  It still needs to exist as an R.id constant so MainActivity and
+  HomeFragment can reference it at compile time — that's what this file
+  is for.
+-->
+<resources>
+    <item name="nav_manage_users" type="id" />
+</resources>

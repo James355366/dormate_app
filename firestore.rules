@@ -1,0 +1,123 @@
+// firestore.rules
+// Deploy to Firebase Console: Firestore Database -> Rules -> Publish
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ── Helper functions ────────────────────────────────────────────────────
+    function isSignedIn()   { return request.auth != null; }
+    function uid()          { return request.auth.uid; }
+    function isOwner(id)    { return uid() == id; }
+
+    function userRole() {
+      return get(/databases/$(database)/documents/users/$(uid())).data.role;
+    }
+    function isDormAdmin()  { return userRole() == 'DORM_ADMIN'; }
+    function isAdmin()      { return userRole() == 'DORM_ADMIN' || userRole() == 'SUPER_ADMIN'; }
+    function isStaff()      { return userRole() == 'MAINTENANCE_STAFF'; }
+    function isSuperAdmin() { return userRole() == 'SUPER_ADMIN'; }
+
+    function isDormAdminDoc()  { return resource.data.role == 'DORM_ADMIN'; }
+    function isResidentDoc()   { return resource.data.role == 'RESIDENT'; }
+
+    // ── users ───────────────────────────────────────────────────────────────
+    match /users/{userId} {
+      allow read:   if isSignedIn();
+      allow create: if isSignedIn() && (
+                        // Self-registration: unverified RESIDENT or auto-verified MAINTENANCE_STAFF.
+                        (isOwner(userId)
+                         && ((request.resource.data.role == 'RESIDENT' && request.resource.data.isVerified == false)
+                             || (request.resource.data.role == 'MAINTENANCE_STAFF' && request.resource.data.isVerified == true)))
+                        // Admin or Super Admin creating profiles for residents or admins.
+                        || (isAdmin() && (request.resource.data.role == 'RESIDENT' || request.resource.data.role == 'DORM_ADMIN'))
+                    );
+      allow update: if isSignedIn() && (
+                        // A user may edit their own profile, but never their role, approval status or uid.
+                        (isOwner(userId)
+                         && !request.resource.data.diff(resource.data)
+                              .affectedKeys().hasAny(['role','isVerified','verified','uid',
+                                                      'approvedAt','approvedBy','adminUid','roomNumber']))
+                        // Admins may approve or update residents/admins.
+                        || isAdmin()
+                    );
+      allow delete: if isSignedIn() && (
+                        (isSuperAdmin() && isDormAdminDoc())
+                        || (isAdmin() && isResidentDoc())
+                    );
+    }
+
+    // ── maintenance_reports ─────────────────────────────────────────────────
+    match /maintenance_reports/{reportId} {
+      allow read: if isSignedIn() && (
+                      resource.data.residentUid == uid()
+                      || resource.data.assignedStaffUid == uid()
+                      || isAdmin()
+                  );
+
+      allow create: if isSignedIn()
+                    && request.resource.data.residentUid == uid()
+                    && request.resource.data.status == 'PENDING';
+
+      allow update: if isSignedIn()
+                    && resource.data.residentUid == uid()
+                    && request.resource.data.diff(resource.data)
+                         .affectedKeys().hasOnly(['photoUrl','updatedAt']);
+
+      allow update: if isSignedIn() && isStaff()
+                    && resource.data.assignedStaffUid == uid()
+                    && request.resource.data.diff(resource.data)
+                         .affectedKeys().hasOnly(['status','updatedAt']);
+
+      allow update: if isSignedIn() && isAdmin();
+
+      allow delete: if isSignedIn() && isAdmin();
+    }
+
+    // ── bills ───────────────────────────────────────────────────────────────
+    match /bills/{billId} {
+      allow read: if isSignedIn() && (
+                      resource.data.residentUid == uid() || isAdmin()
+                  );
+
+      allow create: if isSignedIn() && isAdmin();
+
+      allow update: if isSignedIn() && (
+                      // Resident submitting payment info for their bill
+                      (resource.data.residentUid == uid()
+                       && !resource.data.isPaid
+                       && request.resource.data.diff(resource.data).affectedKeys()
+                            .hasOnly(['paymentMethod','gcashRefNumber','gcashReceiptUrl','paymentStatus']))
+                      // Admins may confirm/verify or update bills
+                      || isAdmin()
+                    );
+
+      allow delete: if isSignedIn() && isAdmin();
+    }
+
+    // ── rooms ───────────────────────────────────────────────────────────────
+    match /rooms/{roomId} {
+      allow read: if isSignedIn();
+      allow create, update, delete: if isSignedIn() && isAdmin();
+    }
+
+    // Safe, server-maintained directory contains names and room assignments only.
+    match /resident_directory/{residentId} {
+      allow read, write: if isSignedIn();
+    }
+    match /payments/{paymentId} {
+      allow read, write: if isSignedIn();
+    }
+    match /dorm_info/{adminId} {
+      allow read;
+      allow create, update: if isSignedIn() && isDormAdmin() && isOwner(adminId);
+      allow delete: if isSignedIn() && isSuperAdmin();
+    }
+
+    // ── announcements ───────────────────────────────────────────────────────
+    match /announcements/{announcementId} {
+      allow read: if isSignedIn();
+      allow create, update, delete: if isSignedIn() && isAdmin();
+    }
+  }
+}

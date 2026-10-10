@@ -1,0 +1,126 @@
+[
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\item_announcement.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\item_announcement.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\item_managed_user.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\item_managed_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\bottom_sheet_pay_gcash.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\bottom_sheet_pay_gcash.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\bottom_sheet_generate_bill.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\bottom_sheet_generate_bill.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\item_room_directory.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\item_room_directory.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\fragment_bills.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\fragment_bills.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\activity_register.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\item_maintenance_report.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\item_maintenance_report.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\bottom_sheet_manage_residents.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\bottom_sheet_manage_residents.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\item_bill.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\item_bill.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\bottom_sheet_room_management.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\bottom_sheet_room_management.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\activity_login.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "com.dormmate.app-mergeDebugResources-59:/layout/activity_register.xml",
+        "source": "com.dormmate.app-main-62:/layout/activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\bottom_sheet_room_directory.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\bottom_sheet_room_directory.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\fragment_manage_users.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\fragment_manage_users.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\bottom_sheet_pending_approvals.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\bottom_sheet_pending_approvals.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\dialog_room_editor.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\dialog_room_editor.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\dialog_add_account.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\dialog_add_account.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\item_pending_user.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\item_pending_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\dialog_post_announcement.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\dialog_post_announcement.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\bottom_sheet_submit_report.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\bottom_sheet_submit_report.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\fragment_announcements.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\fragment_announcements.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\fragment_maintenance.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\fragment_maintenance.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\fragment_profile.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\item_room.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\item_room.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\bottom_sheet_gcash_settings.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\bottom_sheet_gcash_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\activity_pending_verification.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\activity_pending_verification.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\dialog_add_resident.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\dialog_add_resident.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\bottom_sheet_manage_users.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\bottom_sheet_manage_users.xml"
+    }
+]

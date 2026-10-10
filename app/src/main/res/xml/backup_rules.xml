@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Referenced by android:fullBackupContent (Android 11 and below). -->
+<full-backup-content>
+    <!-- Never back up the auth session — a restored token on another device
+         would be invalid and would strand the user on a broken login. -->
+    <exclude domain="sharedpref" path="dormmate_session.xml" />
+</full-backup-content>

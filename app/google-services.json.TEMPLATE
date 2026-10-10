@@ -1,0 +1,18 @@
+REPLACE THIS FILE.
+
+The com.google.gms.google-services plugin fails the build with
+"File google-services.json is missing" unless a real one sits at
+app/google-services.json.
+
+To get yours:
+  1. https://console.firebase.google.com -> your project (or create one)
+  2. Project settings (gear icon) -> "Your apps" -> Add app -> Android
+  3. Android package name: com.dormmate
+     (the debug buildType adds ".debug", so ALSO register com.dormmate.debug,
+      or you will get "No matching client found" when running a debug build)
+  4. Download google-services.json
+  5. Drop it at app/google-services.json  (same folder as app/build.gradle)
+  6. Enable in the console: Authentication (Email/Password),
+     Cloud Firestore, Storage, Cloud Messaging
+
+Then delete this TEMPLATE file.

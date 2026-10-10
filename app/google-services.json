@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1065866835964",
+    "project_id": "dormmate-65445",
+    "storage_bucket": "dormmate-65445.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1065866835964:android:fd0cbf5cf13ad10dcda479",
+        "android_client_info": {
+          "package_name": "com.dormmate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1065866835964-mq0lm0gdvkfvimkpb0vvhdiekk2n93j3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dormmate",
+            "certificate_hash": "9d291245934392f2ba4420799d56769048fa94b8"
+          }
+        },
+        {
+          "client_id": "1065866835964-6gffmugm0s13cm0ag10nkroilgsprumr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJn0TxSNT8RWdTyEaB9WDElmIpnCZTeOQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1065866835964-6gffmugm0s13cm0ag10nkroilgsprumr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

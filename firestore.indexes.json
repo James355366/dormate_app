@@ -1,0 +1,39 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "bills",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "residentUid", "order": "ASCENDING"  },
+        { "fieldPath": "year",        "order": "DESCENDING" },
+        { "fieldPath": "month",       "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "bills",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "month",       "order": "ASCENDING"  },
+        { "fieldPath": "year",        "order": "ASCENDING"  },
+        { "fieldPath": "residentUid", "order": "ASCENDING"  }
+      ]
+    },
+    {
+      "collectionGroup": "maintenance_reports",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "residentUid", "order": "ASCENDING"  },
+        { "fieldPath": "createdAt",   "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "maintenance_reports",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "assignedStaffUid", "order": "ASCENDING"  },
+        { "fieldPath": "createdAt",        "order": "DESCENDING" }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

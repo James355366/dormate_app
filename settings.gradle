@@ -1,0 +1,41 @@
+// settings.gradle
+// ─────────────────────────────────────────────────────────────────────────────
+// This file is REQUIRED for Android projects using the declarative plugins {}
+// block in build.gradle.  Without it, Gradle cannot locate the Plugin Portal
+// or Google's Maven repository, which causes the error:
+//
+//   Plugin [id: 'com.android.application', version: '8.4.0', apply: false]
+//   was not found in any of the following sources
+//
+// Fix: place this file next to the project-level build.gradle.
+// ─────────────────────────────────────────────────────────────────────────────
+
+pluginManagement {
+    repositories {
+        // Android Gradle Plugin lives here
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        // Most other plugins (AGP, Kotlin, etc.)
+        mavenCentral()
+        // Gradle's own plugin portal — fallback for community plugins
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    // FAIL_ON_PROJECT_REPOS forces all repos to be declared here, not in
+    // individual build.gradle files — cleaner and avoids duplicate resolution.
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "dormmate_app"
+include ':app'

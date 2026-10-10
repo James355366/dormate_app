@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="availability_green">#2E6B35</color>
+    <color name="availability_green_container">#B4F3B3</color>
+    <color name="badge_red">#BA1A1A</color>
+    <color name="bottom_nav_selected">#1565C0</color>
+    <color name="bottom_nav_unselected">#74777F</color>
+    <color name="md_theme_error">#BA1A1A</color>
+    <color name="md_theme_error_container">#FFDAD6</color>
+    <color name="md_theme_on_error">#FFFFFF</color>
+    <color name="md_theme_on_error_container">#410002</color>
+    <color name="md_theme_on_primary">#FFFFFF</color>
+    <color name="md_theme_on_primary_container">#001849</color>
+    <color name="md_theme_on_secondary">#FFFFFF</color>
+    <color name="md_theme_on_secondary_container">#002021</color>
+    <color name="md_theme_on_surface">#191C20</color>
+    <color name="md_theme_on_surface_variant">#43474F</color>
+    <color name="md_theme_on_tertiary">#FFFFFF</color>
+    <color name="md_theme_on_tertiary_container">#00210A</color>
+    <color name="md_theme_outline">#74777F</color>
+    <color name="md_theme_outline_variant">#C3C7D0</color>
+    <color name="md_theme_primary">#1565C0</color>
+    <color name="md_theme_primary_container">#D6E4FF</color>
+    <color name="md_theme_secondary">#00696C</color>
+    <color name="md_theme_secondary_container">#6FF7FA</color>
+    <color name="md_theme_surface">#FAFCFF</color>
+    <color name="md_theme_surface_variant">#E0E2EC</color>
+    <color name="md_theme_tertiary">#2E6B35</color>
+    <color name="md_theme_tertiary_container">#B4F3B3</color>
+    <color name="seed">#1565C0</color>
+    <color name="status_in_progress">#1565C0</color>
+    <color name="status_in_progress_tint">#E8A230</color>
+    <color name="status_pending">#E8A230</color>
+    <color name="status_pending_tint">#D94040</color>
+    <color name="status_resolved">#2A9D5C</color>
+    <color name="status_resolved_tint">#2A9D5C</color>
+    <item name="nav_manage_users" type="id"/>
+    <plurals name="manage_admins_count">
+        <item quantity="one">%1$d admin</item>
+        <item quantity="other">%1$d admins</item>
+    </plurals>
+    <plurals name="manage_residents_count">
+        <item quantity="one">%1$d resident</item>
+        <item quantity="other">%1$d residents</item>
+    </plurals>
+    <string name="action_add_resident">Add Resident</string>
+    <string name="action_add_room">Add Room</string>
+    <string name="action_assign_staff">Assign Staff</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_change_password">Change password</string>
+    <string name="action_check_now">Check approval status</string>
+    <string name="action_create_account">Create account</string>
+    <string name="action_delete_room">Delete Room</string>
+    <string name="action_edit_profile">Edit profile</string>
+    <string name="action_edit_room">Edit Room</string>
+    <string name="action_forgot_password">Forgot password?</string>
+    <string name="action_mark_resolved">Mark Resolved</string>
+    <string name="action_post">Post</string>
+    <string name="action_register">Register</string>
+    <string name="action_send_reset_email">Send reset email</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_google">Sign in with Google</string>
+    <string name="action_sign_out">Sign out</string>
+    <string name="action_sign_up_google">Create account with Google</string>
+    <string name="action_start_work">Start Work</string>
+    <string name="add_account_button">Add staff / admin account</string>
+    <string name="add_account_create">Create</string>
+    <string name="add_account_created">%1$s account created for %2$s</string>
+    <string name="add_account_creating">Creating…</string>
+    <string name="add_account_email">Email</string>
+    <string name="add_account_error_email">Enter a valid email address</string>
+    <string name="add_account_error_name">Enter a name</string>
+    <string name="add_account_error_password">Password must be at least 6 characters</string>
+    <string name="add_account_name">Full name</string>
+    <string name="add_account_note">Creates a login the person can use right away. Share the temporary password with them securely.</string>
+    <string name="add_account_password">Temporary password (min. 6 characters)</string>
+    <string name="add_account_role">Role</string>
+    <string name="add_account_role_fixed_admin">New account will be created as Dorm Admin</string>
+    <string name="add_account_send_reset">Also email a password-reset link</string>
+    <string name="add_account_title">New account</string>
+    <string name="app_name">DorMate</string>
+    <string name="approvals_approve">Approve</string>
+    <string name="approvals_approved_toast">%1$s approved</string>
+    <string name="approvals_empty">No accounts are waiting for approval.</string>
+    <string name="approvals_error_approve">Couldn\'t approve account: %1$s</string>
+    <string name="approvals_error_load">Couldn\'t load pending accounts: %1$s</string>
+    <string name="approvals_error_reject">Couldn\'t reject account: %1$s</string>
+    <string name="approvals_registered">Registered %1$s</string>
+    <string name="approvals_reject">Reject</string>
+    <string name="approvals_reject_msg">Are you sure you want to reject and remove %1$s\'s registration request?</string>
+    <string name="approvals_reject_title">Reject Account?</string>
+    <string name="approvals_rejected_toast">%1$s rejected</string>
+    <string name="approvals_subtitle">Approve new resident accounts so they can use the app.</string>
+    <string name="approvals_title">Pending approvals</string>
+    <string name="approvals_unnamed">Unnamed user</string>
+    <string name="attach_photo">Attach Photo (Optional)</string>
+    <string name="cd_pending_approval">Pending approval illustration</string>
+    <string name="cd_quick_action">Quick action</string>
+    <string name="confirm_payment">Confirm Payment</string>
+    <string name="default_notification_channel_id">dormmate_default</string>
+    <string name="default_web_client_id" translatable="false">1065866835964-6gffmugm0s13cm0ag10nkroilgsprumr.apps.googleusercontent.com</string>
+    <string name="empty_announcements">No announcements yet.</string>
+    <string name="empty_bills_admin">No bills found for this period.</string>
+    <string name="empty_bills_resident">All caught up! 🎉\nYou have no unpaid bills at this time.</string>
+    <string name="empty_maintenance_admin">No maintenance reports yet.</string>
+    <string name="empty_maintenance_filtered">No reports match this status filter.</string>
+    <string name="empty_maintenance_resident">No reports yet.\nTap + to submit a maintenance request.</string>
+    <string name="empty_maintenance_staff">No tickets assigned to you yet.</string>
+    <string name="error_announcement_fields_required">Please enter a title and a message</string>
+    <string name="error_email_for_reset">Enter your email to reset your password</string>
+    <string name="error_email_invalid">Enter a valid email address</string>
+    <string name="error_email_required">Email is required</string>
+    <string name="error_google_sign_in_cancelled">Google sign-in was cancelled.</string>
+    <string name="error_google_sign_in_failed">Google sign-in failed. Please try again.</string>
+    <string name="error_name_required">Name is required</string>
+    <string name="error_password_match">New passwords do not match</string>
+    <string name="error_password_mismatch">Passwords do not match</string>
+    <string name="error_password_required">Password is required</string>
+    <string name="error_password_short">Password must be at least 6 characters</string>
+    <string name="error_role_mismatch">Your account role does not match the selected role. Please try again.</string>
+    <string name="error_role_required">Please select a role</string>
+    <string name="error_room_number_required">Enter a room number</string>
+    <string name="error_room_price_required">Enter a valid monthly rent price</string>
+    <string name="error_room_required">Room number is required</string>
+    <string name="filter_all_residents">All residents</string>
+    <string name="filter_pending_approval">Pending approval</string>
+    <string name="gcm_defaultSenderId" translatable="false">1065866835964</string>
+    <string name="generate_bill">Generate Bill</string>
+    <string name="google_api_key" translatable="false">AIzaSyCJn0TxSNT8RWdTyEaB9WDElmIpnCZTeOQ</string>
+    <string name="google_app_id" translatable="false">1:1065866835964:android:fd0cbf5cf13ad10dcda479</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCJn0TxSNT8RWdTyEaB9WDElmIpnCZTeOQ</string>
+    <string name="google_storage_bucket" translatable="false">dormmate-65445.firebasestorage.app</string>
+    <string name="greeting_afternoon">Good afternoon</string>
+    <string name="greeting_evening">Good evening</string>
+    <string name="greeting_morning">Good morning</string>
+    <string name="helper_role_admin">Dorm administrator account</string>
+    <string name="helper_role_super_admin">Full system access account</string>
+    <string name="helper_role_user">Standard resident account</string>
+    <string name="helper_room_number">e.g. 204-B</string>
+    <string name="hint_announcement_body">Message</string>
+    <string name="hint_announcement_title">Title</string>
+    <string name="hint_capacity">Max Occupants (e.g. 2)</string>
+    <string name="hint_confirm_password">Confirm password</string>
+    <string name="hint_contact_number">Contact number</string>
+    <string name="hint_description">Describe the issue…</string>
+    <string name="hint_email">Email address</string>
+    <string name="hint_full_name">Full name</string>
+    <string name="hint_issue_title">Issue title</string>
+    <string name="hint_monthly_price">Monthly Rent (₱)</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_room_number">Room number</string>
+    <string name="hint_select_role">Select Role</string>
+    <string name="label_all_months">All months</string>
+    <string name="label_assign_maintenance_staff">Assign Maintenance Staff</string>
+    <string name="label_assigned_tickets">Assigned to me</string>
+    <string name="label_contact_number">Contact Number</string>
+    <string name="label_email">Email</string>
+    <string name="label_money_collected">Money collected</string>
+    <string name="label_money_collected_this_month">Money collected (this month)</string>
+    <string name="label_open_tickets">Open tickets</string>
+    <string name="label_or">OR</string>
+    <string name="label_overview_dashboard">Overview Dashboard</string>
+    <string name="label_paid">Paid</string>
+    <string name="label_pending_approval">Pending approval</string>
+    <string name="label_pending_bills">Pending bills</string>
+    <string name="label_report_maintenance">Report Maintenance</string>
+    <string name="label_room">Room %1$s</string>
+    <string name="label_room_number">Room number</string>
+    <string name="label_status_in_progress">In Progress</string>
+    <string name="label_status_pending">Pending</string>
+    <string name="label_status_resolved">Resolved</string>
+    <string name="label_surcharge_warning">⚠ 5% late surcharge applied</string>
+    <string name="label_total_admins">Total admins</string>
+    <string name="label_total_residents">Total residents</string>
+    <string name="label_unassigned">Unassigned</string>
+    <string name="label_unpaid">Unpaid</string>
+    <string name="label_unpaid_bills">Unpaid bills</string>
+    <string name="login_subtitle">Sign in to your dorm account</string>
+    <string name="manage_admins_filter_all">All admins</string>
+    <string name="manage_admins_filter_pending">Pending approval</string>
+    <string name="manage_admins_title">Manage Admins and Staffs</string>
+    <string name="manage_residents_empty">No residents found.</string>
+    <string name="manage_residents_search">Search name, email, or room number</string>
+    <string name="manage_residents_subtitle">View residents, approve accounts, or add new residents.</string>
+    <string name="manage_residents_title">Manage Residents</string>
+    <string name="manage_users_change_role">Change role</string>
+    <string name="manage_users_count">%1$d accounts</string>
+    <string name="manage_users_empty">No accounts found.</string>
+    <string name="manage_users_error_action">Action failed: %1$s</string>
+    <string name="manage_users_error_load">Couldn\'t load accounts: %1$s</string>
+    <string name="manage_users_remove">Remove account</string>
+    <string name="manage_users_remove_msg">Remove %1$s? Their profile will be deleted and they will no longer be able to use the app.</string>
+    <string name="manage_users_removed">%1$s removed</string>
+    <string name="manage_users_role_for">Role for %1$s</string>
+    <string name="manage_users_role_updated">%1$s is now %2$s</string>
+    <string name="manage_users_save">Save</string>
+    <string name="manage_users_search">Search name, email, room or role</string>
+    <string name="manage_users_self">You can\'t change your own account here.</string>
+    <string name="manage_users_subtitle">View accounts, approve residents and change roles.</string>
+    <string name="manage_users_title">Manage users</string>
+    <string name="msg_announcement_posted">Announcement posted</string>
+    <string name="msg_confirm_delete_room">Are you sure you want to delete Room %1$s?</string>
+    <string name="msg_confirm_sign_out">Are you sure you want to sign out?</string>
+    <string name="msg_filter_cleared">Filter cleared — showing all months</string>
+    <string name="msg_password_changed">Password changed successfully</string>
+    <string name="msg_pending_verification">Your account has been created. A dorm administrator needs to approve it before you can access the app. This usually takes 1–2 business days.\n\nYou\'ll receive a notification once you\'re approved.</string>
+    <string name="msg_profile_updated">Profile updated successfully</string>
+    <string name="msg_reset_email_sent">Password reset email sent. Check your inbox.</string>
+    <string name="msg_reset_email_sent_to">Password reset email sent to %1$s</string>
+    <string name="msg_resident_created">Resident account created for %1$s</string>
+    <string name="msg_room_added">Room %1$s added</string>
+    <string name="msg_room_deleted">Room %1$s deleted</string>
+    <string name="msg_room_updated">Room %1$s updated</string>
+    <string name="placeholder_greeting">Welcome!</string>
+    <string name="placeholder_no_announcements">No announcements yet</string>
+    <string name="post_announcement">Post Announcement</string>
+    <string name="project_id" translatable="false">dormmate-65445</string>
+    <string name="prompt_have_account">Already have an account?</string>
+    <string name="prompt_no_account">Don\'t have an account?</string>
+    <string name="role_admin">Admin</string>
+    <string name="role_dorm_admin">Dorm Admin</string>
+    <string name="role_maintenance_staff">Maintenance Staff</string>
+    <string name="role_super_admin">Super Admin</string>
+    <string name="role_user">User (Resident)</string>
+    <string name="room_management_empty">No rooms set up yet. Tap Add Room to create one.</string>
+    <string name="room_management_subtitle">Add, edit, set price per month, or delete rooms.</string>
+    <string name="room_management_title">Room Management</string>
+    <string name="section_latest_announcement">Latest announcement</string>
+    <string name="submit_report">Submit Report</string>
+    <string name="tab_announcements">Announcements</string>
+    <string name="tab_bills">Bills</string>
+    <string name="tab_home">Home</string>
+    <string name="tab_maintenance">Maintenance</string>
+    <string name="tab_manage_users">Manage Admins and Staffs</string>
+    <string name="tab_my_queue">My Queue</string>
+    <string name="tab_profile">Profile</string>
+    <string name="title_add_resident">New Resident Account</string>
+    <string name="title_change_password">Change Password</string>
+    <string name="title_edit_profile">Edit Profile</string>
+    <string name="title_pending_verification">Account pending approval</string>
+    <string name="title_register">Create account</string>
+    <style name="Theme.DormMate" parent="Theme.Material3.DayNight.NoActionBar">
+
+        
+        <item name="colorPrimary">@color/md_theme_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_on_primary</item>
+        <item name="colorPrimaryContainer">@color/md_theme_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/md_theme_on_primary_container</item>
+
+        
+        <item name="colorSecondary">@color/md_theme_secondary</item>
+        <item name="colorOnSecondary">@color/md_theme_on_secondary</item>
+        <item name="colorSecondaryContainer">@color/md_theme_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/md_theme_on_secondary_container</item>
+
+        
+        <item name="colorTertiary">@color/md_theme_tertiary</item>
+        <item name="colorOnTertiary">@color/md_theme_on_tertiary</item>
+        <item name="colorTertiaryContainer">@color/md_theme_tertiary_container</item>
+        <item name="colorOnTertiaryContainer">@color/md_theme_on_tertiary_container</item>
+
+        
+        <item name="colorError">@color/md_theme_error</item>
+        <item name="colorOnError">@color/md_theme_on_error</item>
+        <item name="colorErrorContainer">@color/md_theme_error_container</item>
+        <item name="colorOnErrorContainer">@color/md_theme_on_error_container</item>
+
+        
+        <item name="colorSurface">@color/md_theme_surface</item>
+        <item name="colorOnSurface">@color/md_theme_on_surface</item>
+        <item name="colorSurfaceVariant">@color/md_theme_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/md_theme_on_surface_variant</item>
+        <item name="colorOutline">@color/md_theme_outline</item>
+        <item name="colorOutlineVariant">@color/md_theme_outline_variant</item>
+
+        
+        <item name="android:statusBarColor">?attr/colorSurface</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+    <style name="Theme.DormMate.Splash" parent="Theme.DormMate">
+        <item name="android:windowBackground">@color/md_theme_primary</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">@color/md_theme_primary</item>
+    </style>
+</resources>
