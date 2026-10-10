@@ -173,6 +173,16 @@ class HomeFragment : Fragment() {
             }
         }
 
+        viewModel.totalAnnouncementsCount.observe(viewLifecycleOwner) { count ->
+            if (_binding != null && count != null) {
+                val user = viewModel.currentUser.value
+                if (user != null && user.roleEnum == Role.MAINTENANCE_STAFF) {
+                    binding.tvOpenTicketCount.visibility = View.VISIBLE
+                    binding.tvOpenTicketCount.text = count.toString()
+                }
+            }
+        }
+
         viewModel.moneyCollectedThisMonth.observe(viewLifecycleOwner) { amount ->
             if (_binding != null) {
                 val valAmount = amount ?: 0.0
@@ -333,13 +343,17 @@ class HomeFragment : Fragment() {
                 )
                 binding.ivOpenTicketsIcon.setImageResource(R.drawable.ic_announcement)
                 binding.ivOpenTicketsIcon.imageTintList = ColorStateList.valueOf(
-                    ContextCompat.getColor(requireContext(), R.color.md_theme_primary)
+                    ContextCompat.getColor(requireContext(), R.color.md_theme_on_primary_container)
                 )
-                binding.tvOpenTicketCount.visibility = View.GONE
-                binding.tvOpenTicketLabel.text = "Announcements ↗"
-                binding.tvOpenTicketLabel.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16f)
+                binding.tvOpenTicketCount.visibility = View.VISIBLE
+                binding.tvOpenTicketCount.setTextSize(TypedValue.COMPLEX_UNIT_SP, 28f)
+                binding.tvOpenTicketCount.setTextColor(
+                    ContextCompat.getColor(requireContext(), R.color.md_theme_on_primary_container)
+                )
+                binding.tvOpenTicketLabel.text = "Announcements"
+                binding.tvOpenTicketLabel.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12f)
                 binding.tvOpenTicketLabel.setTextColor(
-                    ContextCompat.getColor(requireContext(), R.color.md_theme_primary)
+                    ContextCompat.getColor(requireContext(), R.color.md_theme_on_primary_container)
                 )
 
                 binding.fabQuickAction.text = "View Queue"

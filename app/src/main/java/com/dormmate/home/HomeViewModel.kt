@@ -37,6 +37,7 @@ class HomeViewModel : ViewModel() {
     val moneyCollectedThisMonth = MutableLiveData(0.0)
     val openTicketCount = MutableLiveData(0)
     val assignedTicketCount = MutableLiveData(0)
+    val totalAnnouncementsCount = MutableLiveData(0)
     val latestAnnouncement = MutableLiveData<String?>(null)
     val isLoading = MutableLiveData(false)
     val urgentBannerState = MutableLiveData(
@@ -47,6 +48,7 @@ class HomeViewModel : ViewModel() {
     private var currentReportsSource: LiveData<List<MaintenanceReport>>? = null
     private var currentAssignedReportsSource: LiveData<List<MaintenanceReport>>? = null
     private var currentLatestAnnouncementSource: LiveData<Announcement?>? = null
+    private var currentAllAnnouncementsSource: LiveData<List<Announcement>>? = null
 
     private val billsObserver = Observer<List<Bill>> { bills ->
         val cal = Calendar.getInstance()
@@ -101,6 +103,10 @@ class HomeViewModel : ViewModel() {
 
     private val announcementsObserver = Observer<Announcement?> { ann ->
         latestAnnouncement.postValue(ann?.title)
+    }
+
+    private val allAnnouncementsObserver = Observer<List<Announcement>> { list ->
+        totalAnnouncementsCount.postValue(list?.size ?: 0)
     }
 
     val currentUser: LiveData<User?>
@@ -164,8 +170,15 @@ class HomeViewModel : ViewModel() {
         }
 
         swapLatestAnnouncementSource(latestSource)
+        swapAllAnnouncementsSource(announcementsRepo.getAllAnnouncements())
 
         isLoading.value = false
+    }
+
+    private fun swapAllAnnouncementsSource(newSource: LiveData<List<Announcement>>?) {
+        currentAllAnnouncementsSource?.removeObserver(allAnnouncementsObserver)
+        currentAllAnnouncementsSource = newSource
+        newSource?.observeForever(allAnnouncementsObserver)
     }
 
     private fun swapLatestAnnouncementSource(newSource: LiveData<Announcement?>?) {
