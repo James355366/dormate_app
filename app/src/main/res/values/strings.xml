@@ -13,7 +13,7 @@
     <string name="tab_profile">Profile</string>
 
     <!-- ── Login ─────────────────────────────────────────────────────────── -->
-    <string name="login_subtitle">Sign in to your dorm account</string>
+    <string name="login_subtitle">Sign in your account</string>
     <string name="hint_email">Email address</string>
     <string name="hint_password">Password</string>
     <string name="hint_confirm_password">Confirm password</string>

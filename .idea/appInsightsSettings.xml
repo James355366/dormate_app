@@ -6,6 +6,14 @@
         <entry key="Firebase Crashlytics">
           <value>
             <InsightsFilterSettings>
+              <option name="connection">
+                <ConnectionSetting>
+                  <option name="appId" value="com.dormmate" />
+                  <option name="mobileSdkAppId" value="1:1065866835964:android:fd0cbf5cf13ad10dcda479" />
+                  <option name="projectId" value="dormmate-65445" />
+                  <option name="projectNumber" value="1065866835964" />
+                </ConnectionSetting>
+              </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
               <option name="timeIntervalDays" value="THIRTY_DAYS" />
               <option name="visibilityType" value="ALL" />

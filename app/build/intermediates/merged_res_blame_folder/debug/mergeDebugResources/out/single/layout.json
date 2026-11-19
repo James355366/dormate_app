@@ -16,6 +16,10 @@
         "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\bottom_sheet_generate_bill.xml"
     },
     {
+        "merged": "com.dormmate.app-mergeDebugResources-59:/layout/fragment_home.xml",
+        "source": "com.dormmate.app-main-62:/layout/fragment_home.xml"
+    },
+    {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\item_room_directory.xml",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\item_room_directory.xml"
     },
@@ -28,12 +32,12 @@
         "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\activity_register.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\item_maintenance_report.xml",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\item_maintenance_report.xml"
-    },
-    {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\bottom_sheet_manage_residents.xml",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\bottom_sheet_manage_residents.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\item_maintenance_report.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\item_maintenance_report.xml"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\item_bill.xml",
@@ -46,10 +50,6 @@
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\activity_login.xml",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\activity_login.xml"
-    },
-    {
-        "merged": "com.dormmate.app-mergeDebugResources-59:/layout/activity_register.xml",
-        "source": "com.dormmate.app-main-62:/layout/activity_register.xml"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-mergeDebugResources-59:\\layout\\bottom_sheet_room_directory.xml",

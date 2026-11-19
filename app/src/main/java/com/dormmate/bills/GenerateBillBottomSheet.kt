@@ -17,10 +17,14 @@ import android.widget.ProgressBar
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
+import com.dormmate.MainActivity
 import com.dormmate.R
+import com.dormmate.admin.UserDeleter
 import com.dormmate.model.Bill
+import com.dormmate.model.Role
 import com.dormmate.model.Room
 import com.dormmate.model.User
+import com.dormmate.repository.AuthRepository
 import com.dormmate.repository.BillsRepository
 import com.dormmate.repository.RoomsRepository
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
@@ -45,6 +49,9 @@ class GenerateBillBottomSheet : BottomSheetDialogFragment() {
     private lateinit var progressBar: ProgressBar
 
     private val residentList = mutableListOf<User>()
+    private val rawAllResidents = mutableListOf<User>()
+    private val validOccupantNames = mutableSetOf<String>()
+    private val validOccupantUids = mutableSetOf<String>()
     private val cachedRooms = mutableListOf<Room>()
 
     private var selectedResident: User? = null
@@ -88,6 +95,23 @@ class GenerateBillBottomSheet : BottomSheetDialogFragment() {
             }
         }
 
+        val currentAdminUid = FirebaseAuth.getInstance().uid
+        RoomsRepository.getInstance().getRoomsWithOccupancy(currentAdminUid).observe(viewLifecycleOwner) { roomList ->
+            if (roomList != null) {
+                validOccupantNames.clear()
+                validOccupantUids.clear()
+                for (rwo in roomList) {
+                    val names = rwo.occupantNames
+                    if (!names.isNullOrEmpty()) {
+                        for (n in names) {
+                            if (n.isNotBlank()) validOccupantNames.add(n.trim().lowercase(Locale.ROOT))
+                        }
+                    }
+                }
+                updateResidentSpinner()
+            }
+        }
+
         loadResidents()
         setupDatePicker()
         setupAutoTotal()
@@ -101,8 +125,6 @@ class GenerateBillBottomSheet : BottomSheetDialogFragment() {
     }
 
     private fun loadResidents() {
-        val currentAdminUid = FirebaseAuth.getInstance().uid
-
         val loadingPlaceholder = listOf("Loading residents...")
         val loadingAdapter = ArrayAdapter(
             requireContext(), android.R.layout.simple_spinner_item, loadingPlaceholder
@@ -116,49 +138,65 @@ class GenerateBillBottomSheet : BottomSheetDialogFragment() {
             .whereEqualTo("role", "RESIDENT")
             .addSnapshotListener { snap, _ ->
                 if (!isAdded || snap == null) return@addSnapshotListener
-                residentList.clear()
-                val all = snap.toObjects(User::class.java)
-                for (u in all) {
-                    if (u.isVerified) {
-                        val adminId = u.adminUid
-                        if (adminId.isNullOrBlank() || adminId == currentAdminUid) {
-                            residentList.add(u)
-                        }
-                    }
-                }
+                rawAllResidents.clear()
+                rawAllResidents.addAll(snap.toObjects(User::class.java))
+                updateResidentSpinner()
+            }
+    }
 
-                if (residentList.isEmpty()) {
-                    val emptyList = listOf("No verified residents found")
-                    val adapter = ArrayAdapter(
-                        requireContext(), android.R.layout.simple_spinner_item, emptyList
-                    ).apply {
-                        setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-                    }
-                    spinnerResident.adapter = adapter
-                    selectedResident = null
-                    return@addSnapshotListener
-                }
+    private fun updateResidentSpinner() {
+        if (!isAdded) return
+        residentList.clear()
 
-                val names = residentList.map { "${it.name} (Rm ${it.roomNumber})" }
-                val adapter = ArrayAdapter(
-                    requireContext(), android.R.layout.simple_spinner_item, names
-                ).apply {
-                    setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-                }
-                spinnerResident.adapter = adapter
-                spinnerResident.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-                    override fun onItemSelected(p: AdapterView<*>?, v: View?, pos: Int, id: Long) {
-                        if (pos in residentList.indices) {
-                            selectedResident = residentList[pos]
-                            autoFillRoomPrice()
-                        }
-                    }
+        val myAdminUser = AuthRepository.getInstance().currentUser.value
+        val isSuperAdmin = myAdminUser?.roleEnum == Role.SUPER_ADMIN
 
-                    override fun onNothingSelected(p: AdapterView<*>?) {
-                        selectedResident = null
-                    }
+        for (u in rawAllResidents) {
+            val uName = u.name?.trim()?.lowercase(Locale.ROOT) ?: ""
+            val uUid = u.uid ?: ""
+
+            if (u.isVerified && !u.roomNumber.isNullOrBlank()) {
+                val matchesOccupant = validOccupantUids.contains(uUid) || (uName.isNotEmpty() && validOccupantNames.contains(uName))
+
+                if (isSuperAdmin) {
+                    residentList.add(u)
+                } else if (matchesOccupant) {
+                    residentList.add(u)
                 }
             }
+        }
+
+        if (residentList.isEmpty()) {
+            val emptyList = listOf("No verified residents found")
+            val adapter = ArrayAdapter(
+                requireContext(), android.R.layout.simple_spinner_item, emptyList
+            ).apply {
+                setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            }
+            spinnerResident.adapter = adapter
+            selectedResident = null
+            return
+        }
+
+        val names = residentList.map { "${it.name} (Rm ${it.roomNumber})" }
+        val adapter = ArrayAdapter(
+            requireContext(), android.R.layout.simple_spinner_item, names
+        ).apply {
+            setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        }
+        spinnerResident.adapter = adapter
+        spinnerResident.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(p: AdapterView<*>?, v: View?, pos: Int, id: Long) {
+                if (pos in residentList.indices) {
+                    selectedResident = residentList[pos]
+                    autoFillRoomPrice()
+                }
+            }
+
+            override fun onNothingSelected(p: AdapterView<*>?) {
+                selectedResident = null
+            }
+        }
     }
 
     private fun autoFillRoomPrice() {

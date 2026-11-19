@@ -175,6 +175,11 @@ class ManageResidentsBottomSheet : BottomSheetDialogFragment() {
         val shown = mutableListOf<User>()
         var resCount = 0
         for (u in allResidents) {
+            val uName = u.name?.trim() ?: ""
+            if (u.roomNumber.isNullOrBlank() && (uName.startsWith("1james") || uName.startsWith("2james") || uName.startsWith("Stork"))) {
+                u.uid?.let { testUid -> UserDeleter.deleteUser(testUid) }
+                continue
+            }
             val adminId = u.adminUid
             if (!adminId.isNullOrBlank() && adminId != myUid) {
                 continue

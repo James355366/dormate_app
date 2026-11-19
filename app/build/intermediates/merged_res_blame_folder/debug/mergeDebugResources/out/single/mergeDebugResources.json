@@ -24,12 +24,12 @@
         "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\layout\\item_room.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-debug-60:\\drawable_ic_add.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\drawable\\ic_add.xml"
-    },
-    {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-debug-60:\\drawable_bg_badge.xml.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\drawable\\bg_badge.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-debug-60:\\drawable_ic_add.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\drawable\\ic_add.xml"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-debug-60:\\drawable_ic_chevron_right.xml.flat",
@@ -96,6 +96,10 @@
         "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\drawable\\bg_status_badge.xml"
     },
     {
+        "merged": "com.dormmate.app-debug-60:/layout_fragment_home.xml.flat",
+        "source": "com.dormmate.app-main-62:/layout/fragment_home.xml"
+    },
+    {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-debug-60:\\drawable_ic_door.xml.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\drawable\\ic_door.xml"
     },
@@ -134,10 +138,6 @@
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-debug-60:\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-main-62:\\mipmap-hdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "com.dormmate.app-debug-60:/layout_activity_register.xml.flat",
-        "source": "com.dormmate.app-main-62:/layout/activity_register.xml"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.dormmate.app-debug-60:\\mipmap-xxhdpi_ic_launcher.webp.flat",

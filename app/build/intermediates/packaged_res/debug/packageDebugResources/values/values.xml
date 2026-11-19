@@ -175,7 +175,7 @@
     <string name="label_unassigned">Unassigned</string>
     <string name="label_unpaid">Unpaid</string>
     <string name="label_unpaid_bills">Unpaid bills</string>
-    <string name="login_subtitle">Sign in to your dorm account</string>
+    <string name="login_subtitle">Sign in your account</string>
     <string name="manage_admins_filter_all">All admins</string>
     <string name="manage_admins_filter_pending">Pending approval</string>
     <string name="manage_admins_title">Manage Admins and Staffs</string>

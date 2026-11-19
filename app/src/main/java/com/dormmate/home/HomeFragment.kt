@@ -412,6 +412,7 @@ class HomeFragment : Fragment() {
         }
         binding.layoutResidentShortcuts.visibility = if (role == Role.RESIDENT) View.VISIBLE else View.GONE
         binding.cardStaffEditProfile.visibility = if (role == Role.MAINTENANCE_STAFF) View.VISIBLE else View.GONE
+        binding.fabQuickAction.visibility = if (role == Role.RESIDENT) View.VISIBLE else View.GONE
         binding.cardTotalResidents.layoutParams = paramsTotal
     }
 

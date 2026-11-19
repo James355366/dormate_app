@@ -770,6 +770,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="24dp"
+        android:visibility="gone"
+        tools:visibility="gone"
         app:icon="@drawable/ic_add"
         android:text="Quick actions"
         android:contentDescription="@string/cd_quick_action"
